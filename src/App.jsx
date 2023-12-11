@@ -1,18 +1,30 @@
 import { useState } from 'react'
 import { ReactSortable } from "react-sortablejs";
 
+import img1 from '/img1.jpg'
+import img2 from '/img2.jpg'
+import img3 from '/img3.jpg'
+import img4 from '/img4.jpg'
+import img5 from '/img5.jpg'
+import img6 from '/img6.jpg'
+import img7 from '/img4.jpg'
+import img8 from '/img1.jpg'
+import img9 from '/img3.jpg'
+
+
 function App() {
 
   const [imgs, setImgs] = useState([
-    { id: 1, name: "/public/img1.jpg",},
-    { id: 2, name: "/src/assets/img2.jpg"},
-    { id: 3, name: "/src/assets/img3.jpg"},
-    { id: 4, name: "/src/assets/img4.jpg"},
-    { id: 5, name: "/src/assets/img5.jpg"},
-    { id: 6, name: "/src/assets/img6.jpg"},
-    { id: 7, name: "/src/assets/img4.jpg"},
-    { id: 8, name: "/src/assets/img5.jpg"},
-    { id: 9, name: "/src/assets/img6.jpg"},
+    { id: 1, name: img1},
+    { id: 2, name: img2},
+    { id: 3, name: img3},
+    { id: 4, name: img4},
+    { id: 5, name: img5},
+    { id: 6, name: img6},
+    { id: 7, name: img7},
+    { id: 8, name: img8},
+    { id: 9, name: img9},
+   
     
     
   ]);
