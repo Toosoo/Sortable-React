@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { ReactSortable } from "react-sortablejs";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 import img1 from '/img1.jpg'
 import img2 from '/img2.jpg'
@@ -13,6 +15,7 @@ import img9 from '/img3.jpg'
 
 
 function App() {
+const imgsRef = useRef()
 
   const [imgs, setImgs] = useState([
     { id: 1, name: img1},
@@ -24,12 +27,20 @@ function App() {
     { id: 7, name: img7},
     { id: 8, name: img8},
     { id: 9, name: img9},
-   
-    
-    
   ]);
 
- 
+
+  useGSAP(()=>{
+    gsap.from('img',{
+      autoAlpha:0,
+      x:50,
+      rotate:10,
+      stagger:.1,
+      duration:.8,
+      ease:'sine'
+    })
+  },{imgsRef})
+
 
   return (
  
@@ -37,7 +48,7 @@ function App() {
 <div className="w-full min-h-screen flex justify-center items-center">
 
 
-     <ReactSortable className="w-[700px]  flex justify-center items-center flex-wrap gap-10" list={imgs} setList={setImgs} animation={500}>
+     <ReactSortable className="w-[700px]  flex justify-center items-center flex-wrap gap-10" list={imgs} setList={setImgs} animation={500} ref={imgsRef}>
      {imgs.map((e,i) => (
        <div className=' h-56 w-[200px] flex justify-center items-center' key={e.id}>
        
