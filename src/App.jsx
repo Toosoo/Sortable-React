@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { ReactSortable } from "react-sortablejs";
-// import img1 from 'img1.png'
 
 function App() {
 
   const [imgs, setImgs] = useState([
-    { id: 1, name: "/src/assets/img1.jpg",},
+    { id: 1, name: "/public/img1.jpg",},
     { id: 2, name: "/src/assets/img2.jpg"},
     { id: 3, name: "/src/assets/img3.jpg"},
     { id: 4, name: "/src/assets/img4.jpg"},
     { id: 5, name: "/src/assets/img5.jpg"},
     { id: 6, name: "/src/assets/img6.jpg"},
+    { id: 7, name: "/src/assets/img4.jpg"},
+    { id: 8, name: "/src/assets/img5.jpg"},
+    { id: 9, name: "/src/assets/img6.jpg"},
     
     
   ]);
