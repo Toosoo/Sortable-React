@@ -32,12 +32,13 @@ const imgsRef = useRef()
 
   useGSAP(()=>{
     gsap.from('img',{
-      autoAlpha:0,
+      opacity:0,
       x:50,
+      scale:0,
       rotate:10,
       stagger:.1,
       duration:.8,
-      ease:'sine'
+      ease:'back'
     })
   },{imgsRef})
 
